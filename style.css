@@ -1,0 +1,164 @@
+body{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2vh;
+}
+
+h1{
+    font-size: 4rem;
+    font-family: "Courier New", Courier, monospace;
+}
+
+.main-grid{
+    width: 30vw;
+    height: 30vw;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+}
+
+.cell{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Courier New", Courier, monospace;
+    font-size: 4rem;
+    font-weight: bold;
+}
+
+.cell:hover{
+    background-color: rgb(238, 238, 238);
+    opacity: 50%;
+}
+
+.cell.player1{
+    color: aqua;
+}
+
+.cell.player2{
+    color: crimson;
+}
+
+.num2, .num5, .num8{
+    border-left: black 2px solid;
+    border-right: black 2px solid;
+}
+
+.num4, .num5, .num6{
+    border-top: black 2px solid;
+    border-bottom: black 2px solid;
+}
+
+button{
+    font-family: "Courier New", Courier, monospace;
+}
+
+.resultsScreen{
+    font-family: "Courier New", Courier, monospace;    
+    border: 2px gray solid
+}
+
+.resultsScreen button{
+    all: unset;
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin-right: 5px;
+    color: red;
+    user-select: none;
+    width: 20px;
+}
+
+.resultsScreen button:hover{
+    background-color: rgb(224, 224, 224);
+}
+
+#reset,
+#reset *,
+#reset :after,
+#reset :before,
+#reset:after,
+#reset:before {
+  border: 0 solid;
+  box-sizing: border-box;
+}
+
+#reset {
+  -webkit-tap-highlight-color: transparent;
+  -webkit-appearance: button;
+  background-color: #000;
+  background-image: none;
+  color: #fff;
+  cursor: pointer;
+  font-family: "Courier New", Courier, monospace;    
+  font-size: 100%;
+  line-height: 1.5;
+  margin: 0;
+  -webkit-mask-image: -webkit-radial-gradient(#000, #fff);
+  padding: 0;
+}
+
+#reset:disabled {
+  cursor: default;
+}
+
+#reset:-moz-focusring {
+  outline: auto;
+}
+
+#reset svg {
+  display: block;
+  vertical-align: middle;
+}
+
+#reset [hidden] {
+  display: none;
+}
+
+#reset {
+  border: 1px solid;
+  border-radius: 999px;
+  box-sizing: border-box;
+  display: block;
+  font-weight: 900;
+  overflow: hidden;
+  padding: 1.2rem 3rem;
+  position: relative;
+  text-transform: uppercase;
+}
+
+#reset:before {
+  --opacity: 0.2;
+  aspect-ratio: 1;
+  background: #fff;
+  border-radius: 50%;
+  content: "";
+  left: 50%;
+  opacity: var(--opacity);
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  width: 100%;
+  z-index: -1;
+}
+
+#reset:hover:before {
+  -webkit-animation: enlarge 1s forwards;
+  animation: enlarge 1s forwards;
+}
+
+@-webkit-keyframes enlarge {
+  to {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(4);
+  }
+}
+
+@keyframes enlarge {
+  to {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(4);
+  }
+}
